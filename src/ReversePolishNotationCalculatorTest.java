@@ -27,6 +27,11 @@ public class ReversePolishNotationCalculatorTest {
     public void shouldCalculateAdditionWithSpaces() {
         assertEquals(7, rpn.calculatePolishNotation("  3   4   +  "));
     }
+
+    @Test
+    public void shouldCalculateNegativeValues() {
+        assertEquals(4, rpn.calculatePolishNotation("7 -3 +"));
+    }
 }
 
 class ReversePolishNotationCalculator {
